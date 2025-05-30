@@ -20,4 +20,5 @@ manual.cs50.io has the manual for header files
 -Get user input in c:
     - use scanf() also available in <stdio.h> to get input.
         - it uses : %s, %d for taking inputs
+        - add extra space " %c" before c for since there is an extra space already present causing the scanf to skip the letter
 question: why c is fastest?
