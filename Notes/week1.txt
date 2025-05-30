@@ -13,6 +13,6 @@ manual.cs50.io has the manual for header files
     - cp : copy
     - ls : list files
     - mkdir : make directory
-    - mv : move /rename
+    - mv : move /rename  [eg: mv hello.c hello : moves hello.c file to hello folder]
     - rm : remove
     - rmdir : remove directory
