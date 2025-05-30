@@ -16,3 +16,8 @@ manual.cs50.io has the manual for header files
     - mv : move /rename  [eg: mv hello.c hello : moves hello.c file to hello folder]
     - rm : remove
     - rmdir : remove directory
+
+-Get user input in c:
+    - use scanf() also available in <stdio.h> to get input.
+        - it uses : %s, %d for taking inputs
+question: why c is fastest?

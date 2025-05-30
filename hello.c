@@ -6,6 +6,8 @@ int main(void)
 {
     //string answer=get_string("whats your name? ");
     //printf("hello, world. Name is %s\n", answer);
-    printf("hello, world.");
-    
+    char name[100];
+    printf("hello, world.\nWhat is your name?\n");
+    scanf("%s", name);
+    printf("Hello, my name is %s\n",name);
 }
