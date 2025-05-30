@@ -1,0 +1,18 @@
+- Escape Sequences:
+    - \n : next line
+    - \r : beginning of the line
+    - \" : to add double quote to text
+    - \' : to add single quote to text
+    - \\ : to add back-slash to text
+
+- Header Files: gives access to libraries and language related functionalities
+manual.cs50.io has the manual for header files
+
+-command prompts:
+    - cd : change directory
+    - cp : copy
+    - ls : list files
+    - mkdir : make directory
+    - mv : move /rename
+    - rm : remove
+    - rmdir : remove directory
