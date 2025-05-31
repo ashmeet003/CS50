@@ -19,6 +19,21 @@ manual.cs50.io has the manual for header files
 
 -Get user input in c:
     - use scanf() also available in <stdio.h> to get input.
-        - it uses : %s, %d for taking inputs
+        - it uses : %s, %d, and more for taking inputs
         - add extra space " %c" before c for since there is an extra space already present causing the scanf to skip the letter
+
+-Truncation: process where computer changes float value to int because variable number stored in is int
+    eg: int x; x=1/2 (=1.5 but answer is 1)
+    To avoid this we can use : parsing
+    printf("%f", (float)x/y)
+    printf("%.5f", (float)x/y) : takes floating number to 5 digit: 0.0000
+    
+-Macros: are used to define numbers like constant to avoid variable manipulation
+    like: #define COURSE 2
+          #define AGE 22
+          #define NAME "Ashmeet"
+
 question: why c is fastest?
+    : direct mapping to machine instructions and its compiled nature, which allows for optimized execution.
+      Unlike interpreted languages like Python or Java, C compiles directly to machine code, enabling faster 
+      execution because there's no intermediate layer of interpretation or bytecode execution. 
