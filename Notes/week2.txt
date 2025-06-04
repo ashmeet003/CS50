@@ -5,3 +5,10 @@ the command can be modifies as clang -o hello hello.c
 This says: -o for output
 so, output hello when hello.c is compiled, 
 so file created is ./hello which is better to know which file belongs to hello.c
+
+- Steps of compiling:
+preprocessing : preprocessing directives as in (#)include: adds the library functions to the program
+compiling : translated from one language to assembly code, language understood by cpu
+assembling : convert assembly code to binary 0 & 1's for computer to understand
+linking : linking all the files in code: eg
+        hello.c cs50.c stdio.h comes together to form full program
