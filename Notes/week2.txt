@@ -12,3 +12,6 @@ compiling : translated from one language to assembly code, language understood b
 assembling : convert assembly code to binary 0 & 1's for computer to understand
 linking : linking all the files in code: eg
         hello.c cs50.c stdio.h comes together to form full program
+
+-string ends with space or 0, but to better represent its good to says it as /0
+that's how variable keeps track to as where string ends or NUL value (single L: terminating character)
