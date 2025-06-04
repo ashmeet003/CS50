@@ -1,0 +1,7 @@
+-change behaviour of a command:
+like clang: an open source to compiple 
+eg: for file: hello.c, clang hello.c provides a file ./a.out
+the command can be modifies as clang -o hello hello.c
+This says: -o for output
+so, output hello when hello.c is compiled, 
+so file created is ./hello which is better to know which file belongs to hello.c
