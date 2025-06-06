@@ -1,9 +1,9 @@
 //Checks length of a string
 
 #include <stdio.h>
-int strlen( char *str); //returns length of the string
-void toUpperCase(char *str); //string is changed at memory so no return value
-int isletter(char *str); //checks if string has char other than letters
+int strlen( char *str);
+void toUpperCase(char *str);
+int isletter(char *str);
 
 int main(void){
     char stri[50];
@@ -38,7 +38,7 @@ void toUpperCase(char *str){ //string is changed at memory so no return value
     }
 }
 
-int isletter(char *str){ //checks if string has char other than letters
+int isletter(char *str){
     int flag=0;
     for(int i=0;str[i]!='\0';i++){
         if((str[i]>=65 && str[i]<=90) || (str[i]>=97 && str[i]<=122) ){
