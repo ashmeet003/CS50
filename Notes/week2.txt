@@ -15,3 +15,8 @@ linking : linking all the files in code: eg
 
 -string ends with space or 0, but to better represent its good to says it as /0
 that's how variable keeps track to as where string ends or NUL value (single L: terminating character)
+
+-Why int main as int return?
+        because of exit cases. in case of error code numbers
+        such as error code like 404 are returned in case of code failure
+        Numbers are standardized as what could go wrong with the code
