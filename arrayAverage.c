@@ -3,8 +3,9 @@
 
 #include <stdio.h>
 float average(int length, int arr[]);
-const int N = 3;
+
 int main(void){
+    int N = 3;
     int array[N];
     int num;
     for(int i=0;i<N;i++){
