@@ -1,9 +1,10 @@
 //Checks length of a string
 
 #include <stdio.h>
+#include <stdbool.h>
 int strlen( char *str); //returns length of the string
 void toUpperCase(char *str); //string is changed at memory so no return value
-int isletter(char *str); //checks if string has char other than letters
+bool isletter(char *str); //checks if string has char other than letters
 
 int main(void){
     char stri[50];
@@ -13,8 +14,8 @@ int main(void){
     printf("Length of string is: %d\n", strlen(stri));
     toUpperCase(stri);
     printf("Upper case version of string: %s\n", stri);
-    int letterFlag= isletter(stri);
-    if(letterFlag==0){
+    bool letterFlag= isletter(stri);
+    if(letterFlag==1){
         printf("All chars are letters.\n");
     }
     else{
@@ -38,16 +39,14 @@ void toUpperCase(char *str){ //string is changed at memory so no return value
     }
 }
 
-int isletter(char *str){ //checks if string has char other than letters
-    int flag=0;
+bool isletter(char *str){ //checks if string has char other than letters
     for(int i=0;str[i]!='\0';i++){
         if((str[i]>=65 && str[i]<=90) || (str[i]>=97 && str[i]<=122) ){
             continue;
         }
         else{
-            flag=1;
-            break;
+            return false;
         }
     }
-    return flag;
+    return true;
 }
