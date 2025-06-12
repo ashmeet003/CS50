@@ -1,0 +1,5 @@
+-Format Specifiers
+    Special Tokens that begin with % symbol
+    followed by a character that specifies data type
+    and optional modifiers (width, precision, flags)
+    They control how data is displayed or interpreted
