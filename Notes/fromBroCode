@@ -3,3 +3,18 @@
     followed by a character that specifies data type
     and optional modifiers (width, precision, flags)
     They control how data is displayed or interpreted
+
+    int: %d
+    float: %f
+    double: %lf
+    char: %c
+    string: $s (string is array of characters)
+    width: %nd (n= any numbers to specify total width of number displayed)
+        %3d =   1;
+        %03d= 001;
+        %-3d= 1  ;
+        %+d = +1; //would display if number is =ve or -ve
+    precision: default for float is ti display 6 digits after decimal, hence 1 is displayed as 1.000000
+        %.nf : to display n digits after decimal (output is rounded)
+    Width, precision and flags could be combined
+        %+7.2f is one example
