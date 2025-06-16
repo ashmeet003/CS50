@@ -18,3 +18,14 @@
         %.nf : to display n digits after decimal (output is rounded)
     Width, precision and flags could be combined
         %+7.2f is one example
+
+-Use strings
+    string in C is an array of characters
+    to get input as %c always add a space before %c to eliminate the extra space from input buffer
+    to get input with space in string use fgets()
+    fgets([name of string variable], [length of variable], [name of library for input])
+        fgets(name, strlen(name), stdin)
+        strlen uses string.h library
+    Also to eliminate the last \n character from input buffer when you type string and press enter use:
+        getchar() //gets \n char from input buffer
+        name[strlen(name)-1]='\0'; //this puts last char as nul char
