@@ -29,3 +29,16 @@
     Also to eliminate the last \n character from input buffer when you type string and press enter use:
         getchar() //gets \n char from input buffer
         name[strlen(name)-1]='\0'; //this puts last char as nul char
+
+-Math lib
+    to use math lib us <math.h> library
+    Few example:
+        sqrt(x)  : square root of x
+        pow(x,n) : x raised to the power n
+        round(x) : x rounded to nearest number
+        ceil(x)  : x rounded up to next number
+        floor(x) : x rounded down to prior number
+        abs(x)   : gives number as +ve
+        log(x)   : natural log of x
+        trigonometry  with x in radians
+        sin(x), cos(x), tan(x)
