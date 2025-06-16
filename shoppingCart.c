@@ -7,14 +7,19 @@ int main(void){
     char item[50]="";
     float price=0.0f; //f here tells it is a floating point number
     int numItems=0;
+
     printf("Which item would you like to buy? :");
     fgets(item, sizeof(item), stdin);
     item[strlen(item)-1]='\0';
+
     printf("Enter the price of each: $");
     scanf("%f", &price);
+
     printf("Enter number of items in the cart: ");
     scanf("%d", &numItems);
+
     printf("..........................................\n");
+    
     printf("You have %d %s(s) in your cart with each priced $%.2f\n", numItems, item, price);
     printf("Your total price to be paid is: $%.2f\n", (numItems*price));
 }
