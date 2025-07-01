@@ -42,3 +42,10 @@
         log(x)   : natural log of x
         trigonometry  with x in radians
         sin(x), cos(x), tan(x)
+
+- Sleep(n)
+    A function specifically helpful during countdown
+    use header file: <windows.h> //for windows & function: Sleep(n)
+                     <unistd.h> //for linux/mac & function: sleep(n)
+    n is in milliseconds
+    Sleep(1000) could delay program by 1 second
