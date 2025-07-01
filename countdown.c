@@ -7,12 +7,13 @@
 
 int main(void){
     printf("Countdown begins!\n");
+    printf("-------------------------\n");
 
     for(int i=10; i>0; i--){
         printf("%d\n", i);
         Sleep(1000); //1000 ms = 1s
         //sleep() for mac/linux with small s
     }
-    
-    printf("Happy New Year!!!!\n");
+
+    printf("\nHappy New Year!!!!\n");
 }
