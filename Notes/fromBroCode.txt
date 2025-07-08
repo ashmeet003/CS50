@@ -49,3 +49,19 @@
                      <unistd.h> //for linux/mac & function: sleep(n)
     n is in milliseconds
     Sleep(1000) could delay program by 1 second
+
+- rand()
+    the normal application of random function in c could cause same numbers as output.
+    The reason, is that seed value given to the function remains same.
+    To correct that time() could be used, to give given system time to function
+    and output random num each time.
+     Example:
+        #include <stdlib.h>
+         #include <time.h>
+        srand(time(NULL)); // NULL or 0 could be used
+        printf("%d", rand()); //would output diff num each time
+    To check max num for rand() accord to OS and compiler try RAND_MAX() const.
+    Using:
+        int x= (rand() % 2); //will give random num as 0 or 1
+        int x= (rand() % 2) + 1; // will give 1 or 2
+        int x= (rand() % (max - min + 1)) + min; //will give num between range of max and min
