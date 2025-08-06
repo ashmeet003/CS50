@@ -65,3 +65,18 @@
         int x= (rand() % 2); //will give random num as 0 or 1
         int x= (rand() % 2) + 1; // will give 1 or 2
         int x= (rand() % (max - min + 1)) + min; //will give num between range of max and min
+
+**C doesn't automatically clear out memory automatically.
+- array
+    - A fixed-size collection of elements of the same data type.
+    Partially initializing array:
+    int scores[5] = {0}; //would initialize all address values as 0 instead of garbage value.
+    example codes: arrayAverage.c
+    - 2D array: an array where each element is an array
+    especially useful if need grid or matrix of data
+    But drawback is that number of columns needs to be specified while intializing the array
+    int numbers[][3] = {{},{},{}}
+    - size of array = sizeof(arrayName) / sizeof(arrayName[0]);
+    Example: int size = sizeof(scores) / sizeof(scores[0]);
+
+    
