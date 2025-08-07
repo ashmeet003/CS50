@@ -32,6 +32,17 @@
         getchar() //gets \n char from input buffer
         name[strlen(name)-1]='\0'; //this puts last char as nul char
 
+- toupper()
+    - It would need <ctype.h> header file.
+    - toupper('a') = 'A';
+
+- strncopy():
+    - uses <string.h>
+    - could be used to assign a value to a variable
+    -Example:
+        strncpy(variableName, "String");
+    //reference in structExample.c
+
 -Math lib
     to use math lib us <math.h> library
     Few example:
@@ -81,10 +92,6 @@
     - size of array = sizeof(arrayName) / sizeof(arrayName[0]);
     Example: int size = sizeof(scores) / sizeof(scores[0]);
 
-- toupper()
-    - It would need <ctype.h> header file.
-    - toupper('a') = 'A';
-
 - typedef:
     reserved keyword that gives an existing datatype a "nickname"
     Helps simplify complex types and improves code readability.
@@ -99,7 +106,7 @@
     - Benefit: Replaces numbers with readable names.
     - In C, all constants are capital letters
     - By default, first constant's value would be 0
-    
+    //refer to enumExample.c
     Example:
     enum Day{SUNDAY, MONDAY, TUESDAY}; //(You could assign value to constants; SUNDAY=2 etc; By default SUNDAY=0)
     //its like: int a, b, c;
@@ -116,5 +123,17 @@
     int main(){
         Day today = Monday; //no need to mention enum here
     }
+
+- struct:
+    - A custom container that holds multiple pieces of related information
+      Similar to objects in other languages. C version of OOP
+    - Think struct as an blueprint
+    - could hold different dataType values
+    - typedef is used similar to enum
+    - to access a member of struct use dot operator // member access operator
+      structVariableName.structMember
+    - to intialise value of struct:
+      StructName variable = {0};
+    //refer to structExample.c
 
     
