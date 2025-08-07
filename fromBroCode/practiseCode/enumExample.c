@@ -1,6 +1,7 @@
 /*
     The program is meant to showcase the use of enum (short of enumerations)
     and how it improves program's readability instead of using numbers
+    ***enum are set of named integer constant***
 */
 
 #include <stdio.h>
