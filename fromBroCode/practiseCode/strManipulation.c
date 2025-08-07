@@ -32,6 +32,8 @@ int strlen(char *str){ //returns length of the string
 }
 
 void toUpperCase(char *str){ //string is changed at memory so no return value
+    /*instead of following if statement a function called toupper() could also be used.
+        It would need <ctype.h> header file.*/
     for(int i=0;str[i]!='\0';i++){
         if(str[i]>='a' && str[i]<='z'){
             str[i]=str[i]-32;

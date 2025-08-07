@@ -79,4 +79,8 @@
     - size of array = sizeof(arrayName) / sizeof(arrayName[0]);
     Example: int size = sizeof(scores) / sizeof(scores[0]);
 
+- toupper()
+    - It would need <ctype.h> header file.
+    - toupper('a') = 'A';
+
     

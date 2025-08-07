@@ -35,6 +35,10 @@ int main(void){
         scanf(" %c", &choice);
 
         //Works to convert choice to Upper Case if in case user enters lowerCase character
+        /*instead of following if statement a function called toupper() could also be used.
+        It would need <ctype.h> header file.
+        choice = toupper(choice);
+        */
         if(choice >= 'a' && choice <= 'z'){
             choice = choice - 32;
         }
