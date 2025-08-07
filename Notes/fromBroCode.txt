@@ -136,4 +136,16 @@
       StructName variable = {0};
     //refer to structExample.c
 
+- array of structs:
+    - array where each element contains a struct{}
+    - Helps organize and groups together related data.
+
+- pointer:
+    - A variable that stores the memory address of another variable.
+    - Benefit: They help avoid wasting memory by allowing you to pass
+               the address of a large data structure instead of copying the entire data.
+    - visualise * (dereference pointer) as a key to unlock memory address.
+    - a pointer is just an address to another variable.
+    // refer to pointerExample.c
+
     

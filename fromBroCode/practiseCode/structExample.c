@@ -24,6 +24,8 @@ int main(){
     student[2] = (Student){"Elena", 17, 3.9, true};
     // the values needs to be casted with (Student) since value are assigned after declaration and initialization
     // also called compound literal
+    // the above could also be done together:
+    // student[] = {{},{},{}};
 
     student[3] = (Student){0};
     strcpy(student[3].name, "Ved"); //no cast was used here since value assigning is from data type to data type
