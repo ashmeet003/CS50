@@ -1,3 +1,5 @@
+# C Tutorial
+
 -Format Specifiers
     Special Tokens that begin with % symbol
     followed by a character that specifies data type
@@ -82,5 +84,37 @@
 - toupper()
     - It would need <ctype.h> header file.
     - toupper('a') = 'A';
+
+- typedef:
+    reserved keyword that gives an existing datatype a "nickname"
+    Helps simplify complex types and improves code readability.
+    - typedef existing_type new_name;
+    - typedef int Number;
+    - typedef char String[sizeNeeded]; /or/ just char *String[];
+    - for char user[] = "ST"; = typedef char String[3]; //because we count the nul terminator
+        "ST" == 'S', 'T', '\0';
+
+- enum / enumerations:
+    - A user-defined data type that consists of a set of named integer constants.
+    - Benefit: Replaces numbers with readable names.
+    - In C, all constants are capital letters
+    - By default, first constant's value would be 0
+    
+    Example:
+    enum Day{SUNDAY, MONDAY, TUESDAY}; //(You could assign value to constants; SUNDAY=2 etc; By default SUNDAY=0)
+    //its like: int a, b, c;
+    int main(){
+        enum Day today = SUNDAY;
+        //Day is data type; today is variable; SUNDAY is value assigned;
+    }
+    //
+    //other way to avoid writing enum each time before data type
+    //
+    typedef enum{
+        SUNDAY, MONDAY, TUESDAY
+    }DAY; //the enum set is typedef to DAY
+    int main(){
+        Day today = Monday; //no need to mention enum here
+    }
 
     
