@@ -161,4 +161,22 @@
     - Buffer: like a waiting room and temporarily stores data
     - a good size to give buffer 1024 bytes = 1kb
     // refer to filewithC folder
+
+- malloc():
+    - A function in C that dynamically allocates 
+      a specified number of bytes in memory.
+    - uses <stdlib.h>
+    - is used if we do not the size we need to reserve in memory for data entry
+    - then we could use malloc() by allocating it to pointer
+    - the memory reserved from 'Heap'. In most cases memory is used in 'Stack'
+    - after done using malloc(), we have to return space/ memory
+        - free up space: using free();
+    - reset the pointer too; pointer == key to space
+        - pointer = NULL;
+        - this avoids dangling pointers; pointing to unused memory
+        - before this check if pointer is NULL else could cause segmentation fault
+            -occurs when a program attempts to access memory location that can no longer be accessed.
+    // refer mallocExample.c
+
+
     
