@@ -155,7 +155,10 @@
         fopen(); //fopen("name.txt", "w"); (w= write and r= read)
         fclose();
         fprintf(); // with 3 arguments: (pFile, "%s", text);
+        fgets(); //arguments: buffer(storing place), size of buffer, pointer of file
     - if file couldn't be opened, it return NULL
     - for writing absolute path: use double'\' (\\), else C might think it is a excape sequence
+    - Buffer: like a waiting room and temporarily stores data
+    - a good size to give buffer 1024 bytes = 1kb
     // refer to filewithC folder
     

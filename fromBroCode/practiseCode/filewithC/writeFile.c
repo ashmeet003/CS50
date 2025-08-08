@@ -1,3 +1,4 @@
+/*This program shows to write a file in c*/
 #include <stdio.h> //contains inbuilt struct FILE
 
 int main(){
