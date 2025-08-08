@@ -148,4 +148,14 @@
     - a pointer is just an address to another variable.
     // refer to pointerExample.c
 
+- FILE:
+    - we can read and write a file in C
+    - <stdio.h> has built in struct called FILE
+    - function:
+        fopen(); //fopen("name.txt", "w"); (w= write and r= read)
+        fclose();
+        fprintf(); // with 3 arguments: (pFile, "%s", text);
+    - if file couldn't be opened, it return NULL
+    - for writing absolute path: use double'\' (\\), else C might think it is a excape sequence
+    // refer to filewithC folder
     
