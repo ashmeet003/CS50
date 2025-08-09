@@ -178,5 +178,13 @@
             -occurs when a program attempts to access memory location that can no longer be accessed.
     // refer mallocExample.c
 
+- calloc():
+    - Contiguous Allocation -- clear allocation
+    - <stdlib.h>
+    - Allocates memory dynamically and sets all allocated bytes to 0.
+    - malloc() is faster, but calloc() leads to less bugs
+    - calloc(#inputNum, size)
+    - benefit: would make sure the space reserved is initialised to 0 rather than garbage values. Hence, less bugs
+    //refer to callocExample.c
 
     
