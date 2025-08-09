@@ -187,4 +187,10 @@
     - benefit: would make sure the space reserved is initialised to 0 rather than garbage values. Hence, less bugs
     //refer to callocExample.c
 
-    
+- realloc():
+    - Reallocation: resize previously allocated memory.
+    - <stdlib.h>
+    - realloc(ptr, bytes)
+    - after the prices are already entered by user: what if we wanna add/remove from dynamiv memory
+    - realloc() returns new pointer of memory and recalculates/frees old memory
+    // refer to reallocExample.c
