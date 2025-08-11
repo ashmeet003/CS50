@@ -1,5 +1,5 @@
 -change behaviour of a command:
-like clang: an open source to compile 
+like clang: an open source to compieele 
 eg: for file: hello.c, clang hello.c provides a file ./a.out
 the command can be modifies as clang -o hello hello.c
 This says: -o for output

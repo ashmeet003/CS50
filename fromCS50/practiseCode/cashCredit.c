@@ -1,3 +1,6 @@
+/*
+The program works on 
+*/
 #include <stdio.h>
 
     void checkCash();
