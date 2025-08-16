@@ -20,3 +20,19 @@ that's how variable keeps track to as where string ends or NUL value (single L: 
         because of exit cases. in case of error code numbers
         such as error code like 404 are returned in case of code failure
         Numbers are standardized as what could go wrong with the code
+
+- header files and functions
+        - in caesar.c
+                #include <stdlib.h> // For atoi()
+                        atoi() converts a string to int
+                #include <string.h> // For strlen()
+                        returns length of string
+                #include <ctype.h>  // For isdigit()
+                        checks if a character is a int
+                #include <libgen.h> // For basename()
+                        takes a path string as input and returns a 
+                        pointer to the last component of that path (the filename)
+
+        - in readability.C
+                #include <ctype.h> // for toupper()
+                        converts a character to upper case

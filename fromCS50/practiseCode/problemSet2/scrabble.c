@@ -29,7 +29,7 @@ int main(){
 
     int score1 = 0, score2 = 0;
 
-    int n = 0; //position of leter in entered word for while loop
+    int n = 0; //position of letter in entered word for while loop
     while(word1[n] != '\0'){
 
         char letter = toupper(word1[n]); //converts letter to upperCase
