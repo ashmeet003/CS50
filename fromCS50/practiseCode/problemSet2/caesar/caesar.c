@@ -42,7 +42,6 @@ int main(int argc, char *argv[]){
 
     //encryption program starts
     char plaintext[100];
-    char ciphertext[100];
     printf("plaintext:  ");
     fgets(plaintext, sizeof(plaintext), stdin);
     plaintext[strlen(plaintext) - 1] = '\0';
