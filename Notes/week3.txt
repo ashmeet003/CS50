@@ -1,0 +1,42 @@
+- Big O Notation
+    O(n^2)
+    O(n log n)
+    O(n)        - linear search
+    O(log n)    - binary search
+    O(1)
+
+Big O notation is upper bound
+Big omega(Ω) notation is lower bound
+    Ω(n^2)
+    Ω(n log n)
+    Ω(n)
+    Ω(log n)
+    Ω(1) -linear and binary search
+lower bound suggests the least amount of steps needed
+- Big Theta is where Big O and Big Omega meets
+- This symbology is called asymptotic notation refers to talking of programs efficiency
+
+- Sorting:
+    Selection Sorting
+        select smallest number from num[i] to num[n-1], and swap with n[i]
+        numSteps: (n-1)+(n-2)+(n-3)+....+1 = n(n-1)/2 = (n^2 - n)/2 = n^2/2 - n/2
+        Big O is with highest power
+        = o(n^2)
+        Best case scenario, where data is sorted also goes through same logic regardless
+        = Ω(n^2)
+        Therefore, selection sort is case of theta(n^2)
+    
+    Bubble Sorting
+        swap value if num[i] & num[i+1] is out of order
+        Big o remains same as n^2
+        Big Omega changes to n
+
+Recursive algorithm: a function that call itself
+
+- Merge sort
+    Better sort
+    Uses recursion
+    - Sort left half of numbers
+    - Sort right half of numbers
+    - Merge sorted halves
+    - O(n log n)

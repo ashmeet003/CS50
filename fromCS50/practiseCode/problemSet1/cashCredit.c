@@ -23,14 +23,20 @@ int main(){
 
 void checkCash(){
     int owed = 0;
-    
-    do{
-        printf("Cash owed: cents");
-        scanf("%d", &owed);
-        if(owed < 0){
-            printf("Invalid input! Please enter a positive value.\n");
+    int result;
+
+    do
+    {
+        printf("Change owed: ");
+        result = scanf("%d", &owed);
+        if (result != 1)
+        {
+            while (getchar() != '\n')
+                ;
+            owed = -1;
         }
-    }while(owed < 0);
+    }
+    while (owed < 0); //rejects non nummeric input like "foo"
 
     int totalCount = 0;
     int coinsUsed = 0;
