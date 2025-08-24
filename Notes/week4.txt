@@ -1,0 +1,106 @@
+- Pointers
+
+int n = 50;
+int *p = &n;
+
+p is a variable address which holds a pointer to an int
+& is n' address
+
+#include <string.h>
+string s = "HI!"; // = H I ! \0
+printf("%p", s);        // 0x 123
+printf("%p", &s[0]);    // 0x 123
+printf("%p", &s[1]);    // 0x 124
+printf("%p", &s[2]);    // 0x 125
+printf("%p", &s[3]);    // 0x 126
+
+- Notice: pointer to string s stores same address as first character of same
+Because in c, printf is designed to print values till it encounters Nul Pointer: '\0'
+
+- In higher level languages like java, functions like strlen are there to keep track of input' length.
+But c is lower level and much more effective. It needs less memory than higher languages.
+Hence, pointer stores one address as first character and use it to print value in other addresses, till it finds '\0'.
+
+|   0x123    s       |
+    |_______________> |H|   -> 0x123
+                      |I|   -> 0x124
+                      |!|   -> 0x125
+                      |\0|  -> 0x126
+
+- Pointer arithmetic
+    essentially means to go to other address using current address
+    - our computer uses [] and performs arithmatic behind the scene
+        *s      -> s[0]
+        *(s+1)  -> s[1]
+        *(s+2)  -> s[2]
+
+- Why strcmp() ?
+    - 
+        char *s = "HI!";
+        char *t = "HI!";
+        However, if(s == t) = different.
+    Because storing string is like storing values in a pointer of type char
+    and although s and t has same values, they are stored in different addresses.
+    |   0x123  s |   &   |  0x156  t   |
+    
+    - so strcmp(), basically dereferences the pointers (s&t) and then compares characters for equality.
+
+- Why malloc() ? How to copy strings? strcpy?
+    -
+    string s = "hi!"
+    string t = s;
+    t[0] = toupper(t[0]);   //in ctype.h
+    printf("%s", s);        //prints Hi!
+    printf("%s", t);        //prints Hi!
+    - However, only t[0] was capitialised, so why s did same?
+        The reason, that t stores same address as s, therefore change happens in same address; s=t
+    
+    - To deal with this, malloc is available in stdlib.H
+    - Malloc essentially gives a memory address based on size of variable you pass
+
+    string t = malloc(strlen(s) + 1);       // +1 for '\0' char
+    if(t == NULL)
+    {
+        return 1;                           // if malloc fails
+    }
+    for (int i = 0; i <= strlen(s); i++)
+    {
+        t[i] = s[i];                        // copies till \0
+    }
+
+    free(t);
+
+    - by adding this code, s would not be modified because of t.
+    - Since, different addresses are used.
+    - malloc returning NULL =  no memory available in system.
+    - NEVER FORGET to free memory, else = memory leak
+
+    - Also it would be good practise to check if user entered any value at all
+    if(strlen(s) > 0){
+        t[0] = toupper(t[0]); //no memory would be touched if user just entered or no value.
+    }
+
+    - instead of for loop, strcpy could be used to cpy values
+        strcpy(t, s);
+
+- File:
+    fopen
+    fclose
+    fprintf
+    fscanf
+    fread
+    fwrite
+    fseek
+    - <stdint.h>
+    typedef uint8_t BYTE; //unassigned 8 byte int = BYTE
+
+        FILE *src = fopen(argv[1], "rb"); //reads in byte
+        FILE *dst = fopen(argv[2], "wb"); //writes in bytes
+
+        BYTE b;
+        while(fread(&b, sizeof(b), 1, src) != 0) //reads a byte, 1 byte at a time from src file till it finds nothing = 0
+        {
+            fwrite(&b, sizeof(b), 1, dst);
+        }
+        fclose(dst);
+        fclose(src);

@@ -16,6 +16,10 @@ lower bound suggests the least amount of steps needed
 - Big Theta is where Big O and Big Omega meets
 - This symbology is called asymptotic notation refers to talking of programs efficiency
 
+
+https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html
+-Sorting Visualizations
+
 - Sorting:
     Selection Sorting
         select smallest number from num[i] to num[n-1], and swap with n[i]

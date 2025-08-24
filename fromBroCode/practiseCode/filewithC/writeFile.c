@@ -3,7 +3,7 @@
 
 int main(){
 
-    FILE *pFile = fopen("output.txt", "w"); //w = write & r = read
+    FILE *pFile = fopen("output.txt", "w"); //w = write, a = append, & r = read
     char text[] = "This is written in file.\nHave a good day!!!\n";
     int numText = 123456;
 
