@@ -33,6 +33,7 @@ Using . and * together = -> : to point to locations in memory
 
         int *temp = malloc(4 * sizeof(int));
         if(temp == NULL){
+            free(list); //super subtle but free successfully allocated memory before exiting program
             return 1;
         }
         for(int i = 0; i < 3; i++){

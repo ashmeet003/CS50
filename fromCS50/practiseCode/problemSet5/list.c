@@ -18,6 +18,7 @@
         //time passes, more memory is needed
         int *temp = malloc(4 * sizeof(int)); //temp memory is allocated
         if(temp == NULL){ //checks if memory allocation is successful
+            free(list); //super subtle but free successfully allocated memory before exiting program
             return 1;
         }
 
