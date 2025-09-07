@@ -16,15 +16,22 @@
         list[2] = 3;
 
         //time passes, more memory is needed
-        int *temp = malloc(4 * sizeof(int)); //temp memory is allocated
+        //int *temp = malloc(4 * sizeof(int)); //temp memory is allocated
+        // realloc would try to find space and reallocate it with more memory
+        // hence no new memory needs to be allocated
+
+        int *temp = realloc(list, 4 * sizeof(int));
         if(temp == NULL){ //checks if memory allocation is successful
             free(list); //super subtle but free successfully allocated memory before exiting program
             return 1;
         }
 
+        /* // this was only needed for malloc temp; byt memory is reallocated and not new memory is allocated
         for(int i = 0; i < 3; i++){     // copies old memory to new temp memory
             temp[i] = list[i];
         }
+        */
+       
         temp[3] = 4;        // initializes another value
         
         free(list);         // frees old memory block
