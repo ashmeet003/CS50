@@ -78,3 +78,39 @@ typedef struct node
     int number;
     struct node *next;
 }node;
+
+=> Linked list cannot perform binary search since you cannot go back and forth
+
+TREE:
+: 2 dimensional data structure
+eg: Binary search tree
+
+bool search(node *tree, int number)
+{
+    if(tree == NULL)
+    {
+        return false;
+    }
+    else if(number <tree-> number)
+    {
+        return search(tree->left, number);
+    }
+    else if(number>tree->number)
+    {
+        return(tree->right, number);
+    }
+    else(number == tree->number)
+    {
+        return true;
+    }
+}
+
+
+HASHING:
+hash allows to decide where a value goes in the memory
+Hash tables: like array and linked list together
+stores key value pair
+
+TRIES
+data structure to retrieve data
+is a tree of arrays
