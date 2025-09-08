@@ -51,3 +51,30 @@ Using . and * together = -> : to point to locations in memory
         free(list);
         return 0;
     }
+
+    // this all work could be saved using linked list******
+
+
+Linked Lists:
+    - if we can link different chunks of data on different locations
+    - so each location can point to another location
+    
+Memory and its location ->    [ 1 : 0x123]    [ 2: 0x234]     [ 3: 0x723]
+Location its pointer points:  [   0x234  ]    [  0x723  ]     [   NULL  ]
+While an extra pointer keeps track of start of list:
+
+|  |--->| 1 |
+        |   |---->| 2 |
+                  |   |---->| 3 |
+                            |   |
+ = spending more space but more flexibility to link data than allocating more new memory
+
+
+
+NODE:
+
+typedef struct node
+{
+    int number;
+    struct node *next;
+}node;
